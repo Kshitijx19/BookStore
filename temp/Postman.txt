@@ -1,0 +1,15 @@
+Sign Up:
+
+{
+    "username":"admin@123",
+    "email":"admin@123@gmail.com",
+    "password":"admin@123",
+    "address":"abc"
+}
+
+Sign In:
+
+{
+    "username":"admin@123",
+    "password":"admin@123",
+}

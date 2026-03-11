@@ -8,15 +8,15 @@ const order=new mongoose.Schema(
         },
         book:{
             type: mongoose.Types.ObjectId,
-            ref:"user",
+            ref:"books",
         },
         status:{
             type:String,
             default:"Order Placed",
-            enum:["oderPlaced","Out fro Delivery,Delivered,Cancelled"],
+            enum:["Order Placed","Out for Delivery,Delivered,Cancelled"],
         },
     },
     {timestamps:true}
 );
 
-modeule.exports=mongoose.model("order",order);
+module.exports=mongoose.model("order",order);

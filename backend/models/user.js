@@ -20,16 +20,16 @@ const user=new mongoose.Schema({
         type: String,
         required: true, 
     },
-    avatar:{
+    avatar: {
         type: String,
-        default:"https://tse1.mm.bing.net/th/id/OIP.OYHt-j9ZHOUgQJp6uu-rnQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        default: "https://cdn-icons-png.flaticon.com/512/149/149071.png"
     },
     role:{
         type: String,
         default:"user",
         enum: ["user","admin"],//allowed values
     },
-    favorites:[  //making array as it can contain many items
+    favourites:[  //making array as it can contain many items
         {
         type:mongoose.Types.ObjectId,
         ref:"books",
@@ -51,4 +51,5 @@ const user=new mongoose.Schema({
 {timestamps:true} //sorting the recents on top
 
 );
-module.exports=mongoose.model("user",user);
+module.exports = mongoose.models.user || mongoose.model("user", user);
+//module.exports=mongoose.model("user",user);

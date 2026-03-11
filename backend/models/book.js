@@ -10,6 +10,10 @@ const book=new mongoose.Schema(
             type:String,
             required:true,
         },
+        author:{
+            type:String,
+            required:true,
+        },
         price:{
             type:Number,
             required:true,
@@ -26,5 +30,5 @@ const book=new mongoose.Schema(
     {timestamps:true}
 );
 
-modeule.exports=mongoose.model("books",book);
+module.exports = mongoose.models.books || mongoose.model("books", book);
 //books b\c in user.js we are referencing to books
